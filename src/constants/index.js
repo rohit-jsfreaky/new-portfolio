@@ -143,11 +143,78 @@ export const projects = [
   },
 ];
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/" },
+  { name: "Whatsapp", href: "https://wa.me/916397883500?text=Hi%20Rohit%2C%20I%20saw%20your%20portfolio" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/r2609/" },
+  { name: "GitHub", href: "https://github.com/rohit-jsfreaky" },
+];
+
+
+
+
+export const experiences = [
   {
-    name: "Youtube",
-    href: "https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA",
+    title: "Frontend Engineer",
+    company_name: "Techorigins",
+    icon: "/assets/company/techorigins.jpg",
+    iconBg: "#383E56",
+    date: "July 2025 - Present",
+    points: [
+      "Developed and optimized responsive UIs with React.js, improving page load performance by 30% and enhancing user retention",
+      "Implemented reusable component libraries with TypeScript and Tailwind CSS, reducing development time by 25% across projects.",
+      "Collaborated with backend teams to integrate REST and GraphQL APIs, cutting integration issues by 40%",
+      "Improved accessibility and SEO scores of web apps, achieving 95+ Lighthouse scores and boosting organic traffic",
+    ],
   },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/" },
-  { name: "GitHub", href: "https://github.com/Ali-Sanati" },
+  {
+    title: "React.js Developer",
+    company_name: "Revenza Tech",
+    icon: "/assets/company/revenza.jpg",
+    iconBg: "#383E56",
+    date: "May 2025 - July 2025",
+    points: [
+      "Developed and deployed custom ERP systems, streamlining workflows and reducing manual processing time by 30%.",
+      "Built responsive web applications that improved user engagement and led to a 25% faster load time across platforms.",
+      "Delivered cross-platform mobile apps that enhanced customer reach, achieving 40% higher user adoption within the first release cycle.",
+      "Managed full-stack development independently, completing projects 20% ahead of deadlines while ensuring 99.9% uptime",
+    ],
+  },
+  {
+    title: "Software Developer Engineer intern (React-native)",
+    company_name: "CoRider",
+    icon: "/assets/company/corider.jpg",
+    iconBg: "#383E56",
+    date: "Jan 2025 - May 2025",
+    points: [
+      "Improved UI Performance by 40% – Optimized re-renders and data flow to enhance app responsiveness and user experience.",
+      "Integrated 100% Functional Features – Successfully implemented Google APIs, user KYC verification, and real-time chat, ensuring seamless interactions.",
+      "Ensured 99.9% Uptime on Both Platforms – Fixed Android and iOS-specific issues, enabling smooth cross-platform functionality.",
+      "Enhanced State Management by 60% – Optimized data handling for real-time updates, reducing lag and improving app efficiency.",
+    ],
+  },
+  {
+    title: "Software Developer intern",
+    company_name: "Cogent Web Services",
+    icon: "/assets/company/cogent.png",
+    iconBg: "#383E56",
+    date: "July 2024 - Dec 2024",
+    points: [
+      "Developed 5+ full-stack web applications using MERN stack and PostgreSQL, including complex platforms like an esports tournament management system with secure authentication, payment integration, and admin control.",
+      "Engineered complete backend and frontend architecture for multiple client projects, handling RESTful APIs, responsive UI, and real-time data using React, Node.js, and Express.",
+      "Built and deployed a cross-platform mobile application using React Native under NDA, integrating secure user flows, API consumption, and native device capabilities.",
+      "Delivered production-ready solutions for businesses, from modern portfolio websites to scalable multi-user platforms, improving user engagement and functionality by 40%+.",
+    ],
+  },
+  {
+    title: "Mern Stack Developer intern",
+    company_name: "Zidio Development",
+    icon: "/assets/company/zidio.png",
+    iconBg: "#383E56",
+    date: "Apr 2024 - June 2024",
+    points: [
+      "Developed a full-stack AI-powered resume builder using React, Node.js, and MongoDB, integrating Gemini API for AI-driven suggestions and Clerk for secure authentication.",
+      "Built a dynamic job portal using the MERN stack, implementing recruiter and student authentication, job posting features, and job application tracking.",
+      "Utilized RESTful APIs to handle user authentication, job data retrieval, and secure communication between frontend and backend systems.",
+      "Ensured seamless UI/UX with Tailwind CSS and Shadcn UI, improving user experience across devices while optimizing performance.",
+    ],
+  },
 ];
