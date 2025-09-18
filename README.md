@@ -13,9 +13,9 @@ This is my personal portfolio website featuring:
 ## � Connect With Me
 
 - **Portfolio**: [Live Demo](https://your-portfolio-url.com)
-- **GitHub**: [rohit-jsfreaky](https://github.com/rohit-jsfreaky)
-- **LinkedIn**: [Rohit Kumar Kashyap](https://linkedin.com/in/rohit-kumar-kashyap)
-- **Email**: rohitkashyap5673@gmail.com
+- **GitHub**: [rohit-jsfreaky](https://github.com/rohit-jsfreaky/)
+- **LinkedIn**: [Rohit Kumar Kashyap](https://www.linkedin.com/in/r2609/)
+- **Email**: rohitkashyapmrt@gmail.com
 
 ---
 
