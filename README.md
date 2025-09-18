@@ -1,96 +1,67 @@
-# 🌐 3D Awwwards-Level Developer Portfolio
+# 🌟 My Animated Portfolio
 
-### Built with React, GSAP, Three.js, TailwindCSS
+Welcome to my personal portfolio website! A modern, interactive showcase built with React, Three.js, and smooth animations.
 
-This is a fully animated, interactive, 3D developer portfolio designed to **impress clients, recruiters, and hiring managers**. It's more than a portfolio—it's a web experience built with production-level code, scroll-based animations, and real-world best practices.
+![Portfolio Hero](public/images/profile.png)
 
-> ⚡ Inspired by Awwwards-level sites — built with React (Vite), TailwindCSS, GSAP, React Three Fiber, and Drei.
+## 🎯 About This Portfolio
 
-<br/>
-<div>
-  <img src="https://github.com/user-attachments/assets/4eaf9399-fd02-4a90-83f7-2b5a361bc032" alt="Hero" style="border-radius: 8px;"/>
-  <div style="display: flex; justify-content: space-between; margin: 20px 0;">
-    <img src="https://github.com/user-attachments/assets/155bf742-b24f-4119-89f4-87e6d88c8f53" alt="Works" style="width: 32%; border-radius: 8px;"/>
-    <img src="https://github.com/user-attachments/assets/f22b9749-85ed-434f-a5f6-df1f8e221103" alt="ContactSummary" style="width: 32%; border-radius: 8px;"/>
-    <img src="https://github.com/user-attachments/assets/3e473322-b96a-433b-aec5-ece9bab25795" alt="Contact" style="width: 32%; border-radius: 8px;"/>
-  </div>
-</div>
-<br/>
+This is my personal portfolio website featuring:
+- ✨ **Smooth Animations** - Powered by GSAP
+- 🌍 **3D Planet** - Interactive Three.js elements  
+- 📱 **Fully Responsive** - Looks great on all devices
+- 🎨 **Modern Design** - Clean and professional aesthetic
 
-> 📺 [Watch Full YouTube Walkthrough](https://youtu.be/i0229UsdBwc)
----
+## � Portfolio Showcase
 
-## 🚀 Tech Stack
+### Hero Section
+![Hero Section](public/images/man.jpg)
+*Interactive 3D planet with animated text and smooth scrolling*
 
-| Technology       | Description                             |
-| ---------------- | --------------------------------------- |
-| **React (Vite)** | Fast dev server and production bundling |
-| **Tailwind CSS** | Utility-first styling for components    |
-| **GSAP**         | Scroll-based animation and motion logic |
-| **Three.js**     | 3D scenes powered by React Three Fiber  |
-| **Drei**         | Useful helpers for 3D rendering         |
+### Featured Projects
 
----
+#### 🚀 **AI Interview Platform**
+![AI Interview](public/assets/projects/ai-interview.png)
+*AI-powered mock interview platform with personalized feedback*
 
-## 📁 Features
+#### 📊 **CSV Editor** 
+![CSV Editor](public/assets/projects/cvs-editor.png)
+*Dynamic CSV management platform with cloud storage*
 
-- 🔥 3D Hero Section with animated planet and golden ring
-- 🧩 Smooth slide-in Navbar with staggered link animations
-- 🎯 Scroll-triggered Service Summary with horizontal word motion
-- 🖼️ Works section with hover overlays and interactive previews
-- ✍️ About section with clip-path image reveal + typewriter text
-- 🏁 Marquee-based Contact Summary and CTA
-- 💼 Fully responsive and accessible on all screen sizes
+#### 🎯 **Skill Arena**
+![Skill Arena](public/assets/projects/skill-arena.png)
+*Interactive skill assessment and learning platform*
 
----
+#### 📄 **AI Resume Builder**
+![Resume Builder](public/assets/projects/resume.png)
+*Smart resume builder with AI-powered suggestions*
 
-## 📦 Setup & Installation
+#### 💼 **Job Portal**
+![Job Portal](public/assets/projects/job-portal.jpg)
+*Full-stack job portal connecting students with employers*
+
+## � Quick Start
 
 ```bash
-git clone https://github.com/Ali-Sanati/awwwards-portfolio.git
-cd awwwards-portfolio
+# Clone the repository
+git clone https://github.com/rohit-jsfreaky/animated_portfolio.git
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
-> Open http://localhost:5173 in your browser.
+## � Connect With Me
+
+- **Portfolio**: [Live Demo](https://your-portfolio-url.com)
+- **GitHub**: [rohit-jsfreaky](https://github.com/rohit-jsfreaky)
+- **LinkedIn**: [Rohit Kumar Kashyap](https://linkedin.com/in/rohit-kumar-kashyap)
+- **Email**: rohitkashyap5673@gmail.com
 
 ---
 
-## 🛠️ Customization Tips
+⭐ **Star this repository if you like it!**
 
-- Change text, images, and links in /constants/index.js
-
-- Update 3D models and scene in Hero.jsx
-
-- Add your own contact info in Contact.jsx
-
-- Adjust colors, fonts, and layout via tailwind.config.js
-
----
-
-## 🔗 Assets
-
-Assets used in the project can be found [here](https://github.com/user-attachments/files/19820923/public.zip)
-
----
-
-## 📣 Like the project?
-
-If this helped you build or inspire your own site:
-
-- ⭐ Star this repo
-
-- 📺 [Watch the full walkthrough on YouTube](https://youtu.be/i0229UsdBwc)
-
-- 📬 [Connect on LinkedIn](https://www.linkedin.com/in/ali-sanati)
-
-- 📷 [Follow me on Instagram](https://www.instagram.com/ali.sanatidev/reels/)
-
----
-
-## 🤝 Let’s Build Together
-
-Drop a comment on the video or open an issue with your idea!
-
-> 📩 Like, subscribe, and let me know what kind of project you want to build together!
+Made with ❤️ by **Rohit Kumar Kashyap**
