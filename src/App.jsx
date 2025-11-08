@@ -5,6 +5,7 @@ import ServiceSummary from "./sections/ServiceSummary";
 import Services from "./sections/Services";
 import ReactLenis from "lenis/react";
 import About from "./sections/About";
+import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
 import Works from "./sections/Works";
 import ContactSummary from "./sections/ContactSummary";
@@ -44,7 +45,8 @@ const App = () => {
         <Navbar />
         <Hero />  
         <ServiceSummary />
-        <Services />
+    <Services />
+    <Skills />
         <About />
         <Experience />
         <Works />

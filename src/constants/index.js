@@ -58,6 +58,55 @@ export const servicesData = [
     ],
   },
 ];
+export const skillCategories = [
+  {
+    title: "Languages",
+    subtitle: "Polyglot foundations across frontend and systems",
+    skills: [
+      { name: "JavaScript", icon: "logos:javascript" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "HTML", icon: "logos:html-5" },
+      { name: "CSS", icon: "logos:css-3" },
+      { name: "C", icon: "mdi:language-c" },
+      { name: "C++", icon: "mdi:language-cpp" },
+    ],
+  },
+  {
+    title: "Frameworks & Libraries",
+    subtitle: "Production-ready UI, API, and deployment stacks",
+    skills: [
+      { name: "React", icon: "logos:react" },
+      { name: "Next.js", icon: "skill-icons:nextjs-light" },
+      { name: "Redux", icon: "logos:redux" },
+  { name: "Express.js", icon: "simple-icons:express", iconClassName: "text-white" },
+      { name: "Node.js", icon: "logos:nodejs-icon" },
+      { name: "React Native", icon: "tabler:brand-react-native" },
+      { name: "AWS", icon: "logos:aws" },
+  { name: "Redux Toolkit", icon: "simple-icons:redux", iconClassName: "text-white" },
+    ],
+  },
+  {
+    title: "Tools",
+    subtitle: "Collaboration, delivery, and observability essentials",
+    skills: [
+      { name: "Git", icon: "logos:git-icon" },
+      { name: "Firebase", icon: "logos:firebase" },
+      { name: "Supabase", icon: "logos:supabase-icon" },
+      { name: "Jira", icon: "logos:jira" },
+      { name: "Bitbucket", icon: "logos:bitbucket" },
+    ],
+  },
+  {
+    title: "Databases",
+    subtitle: "Structured and document-first data layers",
+    skills: [
+      { name: "MongoDB", icon: "logos:mongodb-icon" },
+  { name: "SQL", icon: "mdi:database", iconClassName: "text-white" },
+  { name: "NoSQL", icon: "mdi:database-cog-outline", iconClassName: "text-white" },
+      { name: "PostgreSQL", icon: "logos:postgresql" },
+    ],
+  },
+];
 export const projects = [
   {
     id: 1,
