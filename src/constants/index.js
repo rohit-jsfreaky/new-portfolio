@@ -113,7 +113,8 @@ export const projects = [
     name: "Skill Arena",
     description:
       "An online Esport Tournament Management System with team registrations, match scheduling, and real-time score updates.",
-    href: "https://github.com/rohit-jsfreaky/skill-arena-frontend",
+    liveLink: "https://eskillarena.in/",
+    githubLink: null,
     image: "/assets/projects/skill-arena.png",
     bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
@@ -131,7 +132,8 @@ export const projects = [
     name: "Csv Editor",
     description:
       "This project is a robust CSV management platform that combines dynamic table editing, cloud storage with AWS S3, and secure authentication to deliver a seamless and user-friendly experience for managing and editing CSV files.",
-    href: "https://github.com/rohit-jsfreaky/Csv-Editor",
+    liveLink: "https://csv-editor-steel.vercel.app/",
+    githubLink: "https://github.com/rohit-jsfreaky/Csv-Editor",
     image: "/assets/projects/cvs-editor.png",
     bgImage: "/assets/backgrounds/curtains.jpg",
     frameworks: [
@@ -148,7 +150,8 @@ export const projects = [
     name: "Ai Mock Interview",
     description:
       "Built an AI-powered mock interview platform with Next.js, Drizzle ORM, and NeonDB, enhancing user preparation by 80%. Integrated Gemini API for tailored questions and Clerk for secure authentication, ensuring efficiency and scalability.",
-    href: "https://github.com/rohit-jsfreaky/Ai-mock-interview",
+    liveLink: "https://ai-mock-interview-iota-blush.vercel.app/",
+    githubLink: "https://github.com/rohit-jsfreaky/Ai-mock-interview",
     image: "/assets/projects/ai-interview.png",
     bgImage: "/assets/backgrounds/map.jpg",
     frameworks: [
@@ -163,7 +166,8 @@ export const projects = [
     name: "Ai Resume Builder",
     description:
       "I've developed an AI-powered resume builder using React, Node.js, and MongoDB, featuring AI-driven suggestions via Gemini API and secure authentication with Clerk",
-    href: "https://github.com/rohit-jsfreaky/resume-builder-ai",
+    liveLink: null,
+    githubLink: "https://github.com/rohit-jsfreaky/resume-builder-ai",
     image: "/assets/projects/resume.png",
     bgImage: "/assets/backgrounds/poster.jpg",
     frameworks: [
@@ -179,7 +183,8 @@ export const projects = [
     name: "Job Portal",
     description:
       "Developed a job portal using React, Node.js, and MongoDB. Features include secure authentication, job postings, and application management, bridging the gap between students andemployers.",
-    href: "https://github.com/rohit-jsfreaky/job-portal",
+    liveLink: null,
+    githubLink: "https://github.com/rohit-jsfreaky/job-portal",
     image: "/assets/projects/job-portal.jpg",
     bgImage: "/assets/backgrounds/table.jpg",
     frameworks: [

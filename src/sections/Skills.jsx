@@ -5,11 +5,13 @@ import { skillCategories } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   const cardRefs = useRef([]);
+  const isDesktop = useMediaQuery({ minWidth: "48rem" }); // 768px
   const text = `Pragmatic stack spanning languages, frameworks,
     tooling, and data layers ready for prototypes
     or hardened production systems.`;
@@ -19,20 +21,19 @@ const Skills = () => {
       if (!card) return;
 
       gsap.from(card, {
-        y: 120,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
+        y: 200,
         scrollTrigger: {
           trigger: card,
-          start: "top 85%",
+          start: "top 80%",
         },
+        duration: 1,
+        ease: "circ.out",
       });
     });
   }, []);
 
   return (
-    <section id="skills" className="min-h-screen bg-black border-t-2 border-white/20">
+    <section id="skills" className="min-h-screen bg-black rounded-t-4xl">
       <AnimatedHeaderSection
         subTitle={"Stacks I Ship With"}
         title={"Skills"}
@@ -40,46 +41,47 @@ const Skills = () => {
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="px-10 pb-20">
-        <div className="grid gap-8 md:grid-cols-2">
-          {skillCategories.map((category, index) => (
-            <article
-              key={category.title}
-              ref={(el) => {
-                cardRefs.current[index] = el;
-              }}
-              className="relative flex flex-col gap-6 p-8 overflow-hidden border border-white/10 rounded-3xl bg-white/5 backdrop-blur-sm"
-            >
-              <header className="space-y-2">
-                <p className="text-xs tracking-[0.4rem] uppercase text-white/40">
-                  {category.subtitle}
-                </p>
-                <h3 className="text-3xl font-light md:text-4xl text-white">
-                  {category.title}
-                </h3>
-              </header>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {category.skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center gap-4 p-4 transition-colors duration-300 rounded-2xl bg-white/5 hover:bg-white/10"
-                  >
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-black/40 border border-white/10">
-                      <Icon
-                        icon={skill.icon}
-                        className={`w-7 h-7 ${skill.iconClassName ?? "text-gold"}`}
-                      />
-                    </div>
-                    <span className="text-lg font-light tracking-wide text-white">
-                      {skill.name}
-                    </span>
-                  </div>
-                ))}
+      
+      {skillCategories.map((category, index) => (
+        <div
+          ref={(el) => (cardRefs.current[index] = el)}
+          key={index}
+          className="sticky px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30"
+          style={
+            isDesktop
+              ? {
+                  top: `calc(10vh + ${index * 5}em)`,
+                  marginBottom: `${(skillCategories.length - index - 1) * 5}rem`,
+                }
+              : { top: 0 }
+          }
+        >
+           <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-start">
+              <div className="md:w-1/3">
+                 <h2 className="text-4xl lg:text-5xl mb-4">{category.title}</h2>
+                 <p className="text-xl leading-relaxed tracking-widest lg:text-2xl text-white/60 text-pretty">
+                    {category.subtitle}
+                 </p>
               </div>
-            </article>
-          ))}
+              
+              <div className="md:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                 {category.skills.map((skill) => (
+                    <div key={skill.name} className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors duration-300">
+                       <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-black/40 border border-white/10 shrink-0">
+                          <Icon
+                            icon={skill.icon}
+                            className={`w-6 h-6 ${skill.iconClassName ?? "text-gold"}`}
+                          />
+                       </div>
+                       <span className="text-base font-light tracking-wide text-white/90">
+                          {skill.name}
+                       </span>
+                    </div>
+                 ))}
+              </div>
+           </div>
         </div>
-      </div>
+      ))}
     </section>
   );
 };
