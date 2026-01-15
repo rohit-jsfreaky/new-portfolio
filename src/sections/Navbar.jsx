@@ -148,7 +148,7 @@ const Navbar = () => {
           <div className="font-light">
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1lHAuIeClXexvMGppxpqNmFxlTC26zdrq/view?usp=sharing"
+              href="https://drive.google.com/file/d/14l1_2QIpBWmQRYJpXOcFA3JQcDLFnZFV/view?usp=sharing"
               className="px-6 py-3 text-sm tracking-widest uppercase border border-white/50 hover:bg-white hover:text-black transition-all duration-300 text-center rounded-sm"
             >
               Preview Resume

@@ -78,11 +78,19 @@ export const skillCategories = [
       { name: "React", icon: "logos:react" },
       { name: "Next.js", icon: "skill-icons:nextjs-light" },
       { name: "Redux", icon: "logos:redux" },
-  { name: "Express.js", icon: "simple-icons:express", iconClassName: "text-white" },
+      {
+        name: "Express.js",
+        icon: "simple-icons:express",
+        iconClassName: "text-white",
+      },
       { name: "Node.js", icon: "logos:nodejs-icon" },
       { name: "React Native", icon: "tabler:brand-react-native" },
       { name: "AWS", icon: "logos:aws" },
-  { name: "Redux Toolkit", icon: "simple-icons:redux", iconClassName: "text-white" },
+      {
+        name: "Redux Toolkit",
+        icon: "simple-icons:redux",
+        iconClassName: "text-white",
+      },
     ],
   },
   {
@@ -101,13 +109,37 @@ export const skillCategories = [
     subtitle: "Structured and document-first data layers",
     skills: [
       { name: "MongoDB", icon: "logos:mongodb-icon" },
-  { name: "SQL", icon: "mdi:database", iconClassName: "text-white" },
-  { name: "NoSQL", icon: "mdi:database-cog-outline", iconClassName: "text-white" },
+      { name: "SQL", icon: "mdi:database", iconClassName: "text-white" },
+      {
+        name: "NoSQL",
+        icon: "mdi:database-cog-outline",
+        iconClassName: "text-white",
+      },
       { name: "PostgreSQL", icon: "logos:postgresql" },
     ],
   },
 ];
 export const projects = [
+  {
+    id: 0,
+    name: "SaaS Guard",
+    description:
+      "A centralized entitlement and permission management system for SaaS applications, handling feature access, roles, usage limits, and user-level overrides without hard-coded logic.",
+    liveLink: "https://saasguard.rohitbuilds.tech/",
+    githubLink: "https://github.com/rohit-jsfreaky/SaasGuard-frontend",
+    image: "/assets/projects/saasguard.png",
+    bgImage: "/assets/backgrounds/blanket.jpg",
+    frameworks: [
+      { id: 1, name: "React" },
+      { id: 2, name: "TypeScript" },
+      { id: 3, name: "Node.js" },
+      { id: 4, name: "Express.js" },
+      { id: 5, name: "PostgreSQL" },
+      { id: 6, name: "Redis" },
+      { id: 7, name: "Tailwind CSS" },
+      { id: 8, name: "shadcn/ui" },
+    ],
+  },
   {
     id: 1,
     name: "Skill Arena",
@@ -197,13 +229,13 @@ export const projects = [
   },
 ];
 export const socials = [
-  { name: "Whatsapp", href: "https://wa.me/916397883500?text=Hi%20Rohit%2C%20I%20saw%20your%20portfolio" },
+  {
+    name: "Whatsapp",
+    href: "https://wa.me/916397883500?text=Hi%20Rohit%2C%20I%20saw%20your%20portfolio",
+  },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/r2609/" },
   { name: "GitHub", href: "https://github.com/rohit-jsfreaky" },
 ];
-
-
-
 
 export const experiences = [
   {
