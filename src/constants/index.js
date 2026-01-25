@@ -228,6 +228,78 @@ export const projects = [
     ],
   },
 ];
+export const npmPackages = [
+  {
+    id: 1,
+    name: "error-less",
+    tagline: "The 'Viral' Star",
+    emoji: "🌟",
+    problem: "Standard Node.js stack traces are noisy, monochromatic, and force developers to manually hunt for line numbers.",
+    solution: "A zero-config library that intercepts V8 stack traces to print beautiful, syntax-highlighted code frames directly in the terminal, complete with AI-style troubleshooting tips.",
+    features: ["Visual Context - Displays exact 5 lines of code surrounding error", "Smart Suggestions - Auto-generates tips based on error types", "Lightweight - < 100kB packed size with no heavy dependencies"],
+    techStack: ["TypeScript", "V8 Stack Trace API", "AST Parsing", "Source Maps"],
+    image: "/assets/projects/error-less.png",
+    npmLink: "https://www.npmjs.com/package/error-less",
+    githubLink: "https://github.com/rohit-jsfreaky/error-less",
+    downloads: "1.2k+"
+  },
+  {
+    id: 2,
+    name: "cron-safe",
+    tagline: "The 'Reliability' Engine",
+    emoji: "🛡️",
+    problem: "Standard cron jobs fail silently, overlap during long tasks, and vanish during server restarts.",
+    solution: "A drop-in wrapper for `node-cron` that brings enterprise reliability features—usually found in Redis/BullMQ—to simple file-based setups.",
+    features: ["Idempotency & Retries - Automatic exponential backoff", "Overlap Prevention - Atomic locking prevents zombie processes", "Persistence - SQLite-backed job history survives restarts"],
+    techStack: ["TypeScript", "SQLite (WAL Mode)", "Event Emitters", "Process Locking"],
+    image: "/assets/projects/cron-safe.png",
+    npmLink: "https://www.npmjs.com/package/cron-safe",
+    githubLink: "https://github.com/rohit-jsfreaky/cron-safe",
+    downloads: "800+"
+  },
+  {
+    id: 3,
+    name: "node-network-tab",
+    tagline: "The 'Internal' Tool",
+    emoji: "📡",
+    problem: "Debugging HTTP requests on a headless server usually involves messy `console.log` spam.",
+    solution: "A TUI (Terminal User Interface) that visualizes outgoing network traffic in real-time, allowing developers to inspect headers, payloads, and timings without leaving the CLI.",
+    features: ["Zero-Latency - Monkey-patches Node.js http/https modules", "Interactive TUI - Scrollable request history built with Ink"],
+    techStack: ["React (Ink)", "Monkey Patching", "Node.js Streams", "Proxy Patterns"],
+    image: "/assets/projects/node-network-tab.png",
+    npmLink: "https://www.npmjs.com/package/node-network-tab",
+    githubLink: "https://github.com/rohit-jsfreaky/node-network-tab",
+    downloads: "500+"
+  },
+  {
+    id: 4,
+    name: "express-rate-limit-redis-slim",
+    tagline: "The 'Performance' Optimizer",
+    emoji: "⚡",
+    problem: "Existing Redis rate-limiters were bloated with dependencies, slowing down high-throughput microservices.",
+    solution: "A hyper-optimized middleware that uses raw Redis atomic commands (Lua scripts) to handle thousands of requests per second with minimal CPU usage.",
+    features: ["60% Smaller - Stripped of all non-essential dependencies", "Atomic Precision - Prevents race conditions in distributed systems"],
+    techStack: ["Redis (Lua Scripting)", "Express Middleware", "Distributed Systems"],
+    image: "/assets/projects/express-rate-limit-redis-slim.png",
+    npmLink: "https://www.npmjs.com/package/express-rate-limit-redis-slim",
+    githubLink: "https://github.com/rohit-jsfreaky/express-rate-limit-redis-slim",
+    downloads: "2.5k+"
+  },
+  {
+    id: 5,
+    name: "zod-mock-data",
+    tagline: "The 'DX' Booster",
+    emoji: "🛠️",
+    problem: "Writing mock data for tests is tedious and often drifts out of sync with actual Type definitions.",
+    solution: "A utility that recursively parses Zod schemas to generate realistic, randomized test fixtures automatically.",
+    features: ["Single Source of Truth - Zod schema defines validation & mock data", "Complex Types - Handles nested objects, arrays, optional fields"],
+    techStack: ["TypeScript", "Zod", "Recursive Algorithms", "Generics"],
+    image: "/assets/projects/zod-to-mock-data.png",
+    npmLink: "https://www.npmjs.com/package/zod-mock-data",
+    githubLink: "https://github.com/rohit-jsfreaky/zod-mock-data",
+    downloads: "900+"
+  }
+];
 export const socials = [
   {
     name: "Whatsapp",

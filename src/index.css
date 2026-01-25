@@ -92,6 +92,8 @@
   --color-DarkLava: #393632;
   --color-SageGray: #8b8b73;
   --color-gold: #cfa355;
+  --color-teal: #2dd4bf;
+  --color-indigo: #6366f1;
   --font-amiamie: "Amiamie", sans-serif;
   --font-amiamie-round: "Amiamie-Round", sans-serif;
 
@@ -134,3 +136,21 @@ body {
   @apply text-[20px] sm:text-[52px] md:text-[62px] lg:text-[100px];
 }
 
+/* Custom scrollbar for horizontal scrolling sections */
+.scrollbar-visible::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb {
+  background: rgba(207, 163, 85, 0.4);
+  border-radius: 10px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb:hover {
+  background: rgba(207, 163, 85, 0.6);
+}

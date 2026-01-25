@@ -8,7 +8,7 @@ import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
 import Works from "./sections/Works";
-import ContactSummary from "./sections/ContactSummary";
+import NpmPackages from "./sections/NpmPackages";
 import Contact from "./sections/Contact";
 import { useProgress } from "@react-three/drei";
 
@@ -50,7 +50,7 @@ const App = () => {
         <About />
         <Experience />
         <Works />
-        <ContactSummary />
+        <NpmPackages />
         <Contact />
       </div>
     </ReactLenis>

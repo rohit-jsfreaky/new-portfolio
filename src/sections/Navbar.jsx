@@ -4,16 +4,21 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
 
+const navLinks = ["home", "services", "skills", "about", "experience", "work", "npm-packages", "contact"];
+
 const Navbar = () => {
   const navRef = useRef(null);
   const linksRef = useRef([]);
   const contactRef = useRef(null);
   const topLineRef = useRef(null);
   const bottomLineRef = useRef(null);
+  const desktopNavRef = useRef(null);
   const tl = useRef(null);
   const iconTl = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [showBurger, setShowBurger] = useState(true);
+  const [showNav, setShowNav] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
+
   useGSAP(() => {
     gsap.set(navRef.current, { xPercent: 100 });
     gsap.set([linksRef.current, contactRef.current], {
@@ -75,7 +80,8 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      setShowBurger(currentScrollY <= lastScrollY || currentScrollY < 10);
+      setShowNav(currentScrollY <= lastScrollY || currentScrollY < 10);
+      setScrolled(currentScrollY > 50);
 
       lastScrollY = currentScrollY;
     };
@@ -95,14 +101,60 @@ const Navbar = () => {
     }
     setIsOpen(!isOpen);
   };
+
   return (
     <>
+      {/* Desktop Navigation Bar */}
+      <header
+        ref={desktopNavRef}
+        className={`fixed top-0 left-0 right-0 z-40 hidden md:flex items-center justify-between px-10 py-4 transition-all duration-500 ${
+          showNav ? "translate-y-0" : "-translate-y-full"
+        } ${scrolled ? "bg-black/90 backdrop-blur-md" : "bg-transparent"}`}
+      >
+        <Link
+          to="home"
+          smooth
+          duration={1500}
+          className="text-xl font-bold cursor-pointer"
+        >
+          <span className={`transition-colors duration-300 ${scrolled ? "text-white" : "text-black"}`}>
+            Rohit<span className="text-gold">.</span>
+          </span>
+        </Link>
+
+        <nav className="flex items-center gap-8">
+          {navLinks.slice(1, -1).map((section) => (
+            <Link
+              key={section}
+              to={section}
+              smooth
+              offset={0}
+              duration={1500}
+              className={`text-sm uppercase tracking-wider cursor-pointer transition-colors duration-300 hover:text-gold ${
+                scrolled ? "text-white/80 hover:text-gold" : "text-black/80 hover:text-gold"
+              }`}
+            >
+              {section}
+            </Link>
+          ))}
+          <Link
+            to="contact"
+            smooth
+            duration={1500}
+            className="px-5 py-2 text-sm uppercase tracking-wider cursor-pointer bg-black text-white hover:bg-gold transition-all duration-300 rounded-sm"
+          >
+            Contact
+          </Link>
+        </nav>
+      </header>
+
+      {/* Mobile Slide-out Navigation */}
       <nav
         ref={navRef}
-        className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-28 gap-y-10 md:w-1/2 md:left-1/2"
+        className="fixed z-50 flex md:hidden flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-28 gap-y-10"
       >
         <div className="flex flex-col text-3xl gap-y-2 md:text-6xl">
-          {["home", "services", "skills", "about", "experience", "work", "contact"].map(
+          {navLinks.map(
             (section, index) => (
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
                 <Link
@@ -111,6 +163,7 @@ const Navbar = () => {
                   smooth
                   offset={0}
                   duration={2000}
+                  onClick={toggleMenu}
                 >
                   {section}
                 </Link>
@@ -124,9 +177,12 @@ const Navbar = () => {
         >
           <div className="font-light">
             <p className="tracking-wider text-white/50">E-mail</p>
-            <p className="text-xl tracking-widest lowercase text-pretty">
+            <a
+              href="mailto:rohitkashyapmrt@gmail.com"
+              className="text-xl tracking-widest lowercase text-pretty hover:text-gold transition-colors duration-300"
+            >
               rohitkashyapmrt@gmail.com
-            </p>
+            </a>
           </div>
           <div className="font-light">
             <p className="tracking-wider text-white/50">Social Media</p>
@@ -156,11 +212,13 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* Hamburger Button - Mobile Only */}
       <div
-        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
+        className="fixed z-50 flex md:hidden flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 top-4 right-10"
         onClick={toggleMenu}
         style={
-          showBurger
+          showNav
             ? { clipPath: "circle(50% at 50% 50%)" }
             : { clipPath: "circle(0% at 50% 50%)" }
         }

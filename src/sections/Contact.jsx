@@ -1,83 +1,184 @@
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import Marquee from "../components/Marquee";
 import { socials } from "../constants";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-  const text = `Got a question, how or project Idea?
-    WE’D love to hear from you and discus further!`;
-  const items = [
-    "just imagin, I code",
-    "just imagin, I code",
-    "just imagin, I code",
-    "just imagin, I code",
-    "just imagin, I code",
+  const sectionRef = useRef(null);
+  const quoteRef = useRef(null);
+  const ctaRef = useRef(null);
+  const detailsRef = useRef(null);
+
+  const inspirationalItems = [
+    "Innovation",
+    "Precision",
+    "Trust",
+    "Collaboration",
+    "Excellence",
   ];
+
+  const closingItems = [
+    "just imagine, I code",
+    "just imagine, I code",
+    "just imagine, I code",
+    "just imagine, I code",
+  ];
+
   useGSAP(() => {
-    gsap.from(".social-link", {
-      y: 100,
+    // Quote animation
+    gsap.from(quoteRef.current, {
+      y: 80,
       opacity: 0,
-      delay: 0.5,
       duration: 1,
-      stagger: 0.3,
-      ease: "back.out",
+      ease: "power3.out",
       scrollTrigger: {
-        trigger: ".social-link",
+        trigger: quoteRef.current,
+        start: "top 80%",
+      },
+    });
+
+    // CTA buttons
+    if (ctaRef.current) {
+      gsap.from(ctaRef.current.children, {
+        scale: 0.9,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "back.out(1.5)",
+        scrollTrigger: {
+          trigger: ctaRef.current,
+          start: "top 85%",
+        },
+      });
+    }
+
+    // Contact details
+    gsap.from(".contact-detail", {
+      y: 40,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.12,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: detailsRef.current,
+        start: "top 85%",
       },
     });
   }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="contact"
-      className="flex flex-col justify-between min-h-screen bg-black"
+      className="min-h-screen bg-primary flex flex-col"
     >
-      <div>
-        <AnimatedHeaderSection
-          subTitle={"You Dream It, I Code it"}
-          title={"Contact"}
-          text={text}
-          textColor={"text-white"}
-          withScrollTrigger={true}
-        />
-        <div className="flex px-10 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-10">
-          <div className="flex flex-col w-full gap-10">
-            <div className="social-link">
-              <h2>E-mail</h2>
-              <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl">
-                rohitkashyapmrt@gmail.com
-              </p>
-            </div>
-            <div className="social-link">
-              <h2>Phone</h2>
-              <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl lowercase md:text-2xl lg:text-3xl">
-                +91 6397 883 500
-              </p>
-            </div>
-            <div className="social-link">
-              <h2>Social Media</h2>
-              <div className="w-full h-px my-2 bg-white/30" />
-              <div className="flex flex-wrap gap-2">
-                {socials.map((social, index) => (
-                  <a
-                    key={index}
-                    target="_blank"
-                    href={social.href}
-                    className="text-xs leading-loose tracking-wides uppercase md:text-sm hover:text-white/80 transition-colors duration-200"
-                  >
-                    {"{ "}
-                    {social.name}
-                    {" }"}
-                  </a>
-                ))}
-              </div>
+      {/* Top Marquee */}
+      <Marquee items={inspirationalItems} className="text-black bg-transparent" />
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col items-center justify-center py-16 px-6 md:px-10">
+        {/* Inspirational Quote */}
+        <div ref={quoteRef} className="text-center mb-14">
+          <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
+            " Let's build a
+            <br />
+            <span className="font-normal">memorable</span> &{" "}
+            <span className="italic">inspiring</span>
+            <br />
+            web application <span className="text-gold">together</span> "
+          </p>
+        </div>
+
+        {/* CTA Buttons */}
+        <div
+          ref={ctaRef}
+          className="flex flex-wrap items-center justify-center gap-4 mb-16"
+        >
+          <a
+            href="mailto:rohitkashyapmrt@gmail.com"
+            className="px-8 py-4 text-sm font-medium tracking-wider uppercase
+              bg-black text-white rounded-sm
+              hover:bg-gold hover:text-black hover:scale-105
+              transition-all duration-300"
+          >
+            Get In Touch
+          </a>
+          <a
+            href="https://wa.me/916397883500?text=Hi%20Rohit"
+            target="_blank"
+            rel="noreferrer"
+            className="px-8 py-4 text-sm font-medium tracking-wider uppercase
+              border-2 border-black text-black rounded-sm
+              hover:bg-black hover:text-white
+              transition-all duration-300"
+          >
+            WhatsApp
+          </a>
+        </div>
+
+        {/* Contact Details Grid */}
+        <div
+          ref={detailsRef}
+          className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6"
+        >
+          {/* Email */}
+          <div className="contact-detail text-center md:text-left">
+            <p className="text-sm uppercase tracking-wider text-black/40 mb-2">
+              E-mail
+            </p>
+            <a
+              href="mailto:rohitkashyapmrt@gmail.com"
+              className="text-base md:text-lg hover:text-gold transition-colors duration-300"
+            >
+              rohitkashyapmrt@gmail.com
+            </a>
+          </div>
+
+          {/* Phone */}
+          <div className="contact-detail text-center">
+            <p className="text-sm uppercase tracking-wider text-black/40 mb-2">
+              Phone
+            </p>
+            <a
+              href="tel:+916397883500"
+              className="text-base md:text-lg hover:text-gold transition-colors duration-300"
+            >
+              +91 6397 883 500
+            </a>
+          </div>
+
+          {/* Social */}
+          <div className="contact-detail text-center md:text-right">
+            <p className="text-sm uppercase tracking-wider text-black/40 mb-2">
+              Social Media
+            </p>
+            <div className="flex flex-wrap justify-center md:justify-end gap-3">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  target="_blank"
+                  rel="noreferrer"
+                  href={social.href}
+                  className="text-sm hover:text-gold transition-colors duration-300"
+                >
+                  {social.name}
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </div>
-      <Marquee items={items} className="text-white bg-transparent" />
+
+      {/* Bottom Marquee */}
+      <Marquee
+        items={closingItems}
+        reverse={true}
+        className="text-white bg-black"
+      />
     </section>
   );
 };
