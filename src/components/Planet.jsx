@@ -77,4 +77,7 @@ export function Planet(props) {
   );
 }
 
-useGLTF.preload("/models/Planet.glb");
+// Skip the model download on mobile — the Hero doesn't render the Canvas there
+if (typeof window !== "undefined" && window.innerWidth > 853) {
+  useGLTF.preload("/models/Planet.glb");
+}

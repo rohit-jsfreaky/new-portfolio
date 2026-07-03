@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
 
-const navLinks = ["home", "services", "skills", "about", "experience", "work", "npm-packages", "contact"];
+const navLinks = ["home", "services", "skills", "about", "experience", "company-projects", "work", "npm-packages", "contact"];
 
 const Navbar = () => {
   const navRef = useRef(null);

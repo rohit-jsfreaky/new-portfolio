@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "PowerShell(npm run *)",
+      "PowerShell($r = Invoke-RestMethod \"https://api.iconify.design/logos.json?icons=lua,astro-icon,vitejs,tailwindcss-icon,framer,django-icon,redis,socket-io,openai-icon,google-gemini,vercel-icon,postgresql,mongodb-icon,supabase-icon,firebase,python,stripe,git-icon,aws,jira,typescript-icon,javascript,react,redux,nodejs-icon,fastapi-icon,netlify-icon,cloudflare-icon,playwright,postman-icon,github-icon,razorpay,anthropic,claude,openrouter,celery,drizzle-orm\"; Write-Output \"NOT FOUND in logos:\"; $r.not_found)",
+      "PowerShell($r = Invoke-RestMethod \"https://api.iconify.design/simple-icons.json?icons=shadcnui,radixui,reacthookform,zod,drizzle,express,django,fastapi,celery,bullmq,socketdotio,neon,typesense,clerk,razorpay,plaid,caldotcom,render,coolify,openrouter,anthropic,claude,googlegemini,openai,playwright,postman,jira,stripe,astro,zustand,tiptap,tanstack,vercel,dodopayments,docuseal,lua,alembic,taskiq,blocknote,getstream,jsonwebtokens\"; Write-Output \"NOT FOUND in simple-icons:\"; $r.not_found)",
+      "PowerShell($r = Invoke-RestMethod \"https://api.iconify.design/mdi.json?icons=database,format-text,note-text-outline,broadcast,flask-outline,image-multiple-outline,file-search-outline,graph-outline,message-cog-outline,robot-outline,lightning-bolt-outline,cogs,refresh,clock-outline,webhook,access-point,message-text-outline,swap-horizontal,api,shield-lock-outline,speedometer,bank-outline,file-sign,soccer,console,github,account-group,code-tags-check,magnify,database-outline\"; Write-Output \"NOT FOUND in mdi:\"; $r.not_found; $r2 = Invoke-RestMethod \"https://api.iconify.design/twemoji.json?icons=bear,ox\"; Write-Output \"NOT FOUND in twemoji:\"; $r2.not_found; $r3 = Invoke-RestMethod \"https://api.iconify.design/simple-icons.json?icons=sqlite,vercel,socketdotio,express,django,jsonwebtokens,openai\"; Write-Output \"NOT FOUND in simple-icons batch2:\"; $r3.not_found)"
     ]
   }
 }

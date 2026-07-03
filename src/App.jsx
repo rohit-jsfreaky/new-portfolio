@@ -8,19 +8,23 @@ import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
 import Works from "./sections/Works";
+import CompanyProjects from "./sections/CompanyProjects";
 import NpmPackages from "./sections/NpmPackages";
 import Contact from "./sections/Contact";
 import { useProgress } from "@react-three/drei";
+import { useMediaQuery } from "react-responsive";
 
 const App = () => {
   const { progress } = useProgress();
+  const isMobile = useMediaQuery({ maxWidth: 853 });
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    if (progress === 100) {
+    // On mobile the 3D model never loads, so don't wait for its progress
+    if (progress === 100 || isMobile) {
       setIsReady(true);
     }
-  }, [progress]);
+  }, [progress, isMobile]);
 
   return (
     <ReactLenis root className="relative w-screen min-h-screen overflow-x-auto">
@@ -49,6 +53,7 @@ const App = () => {
         <Skills />
         <About />
         <Experience />
+        <CompanyProjects />
         <Works />
         <NpmPackages />
         <Contact />

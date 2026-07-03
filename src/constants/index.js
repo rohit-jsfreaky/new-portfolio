@@ -61,74 +61,348 @@ export const servicesData = [
 export const skillCategories = [
   {
     title: "Languages",
-    subtitle: "Polyglot foundations across frontend and systems",
+    subtitle: "Typed, scripted, and query languages I work in daily",
     skills: [
-      { name: "JavaScript", icon: "logos:javascript" },
       { name: "TypeScript", icon: "logos:typescript-icon" },
-      { name: "HTML", icon: "logos:html-5" },
-      { name: "CSS", icon: "logos:css-3" },
-      { name: "C", icon: "mdi:language-c" },
-      { name: "C++", icon: "mdi:language-cpp" },
+      { name: "JavaScript", icon: "logos:javascript" },
+      { name: "Python", icon: "logos:python" },
+      { name: "SQL", icon: "mdi:database", iconClassName: "text-white" },
+      { name: "Lua", icon: "logos:lua" },
     ],
   },
   {
-    title: "Frameworks & Libraries",
-    subtitle: "Production-ready UI, API, and deployment stacks",
+    title: "Frontend",
+    subtitle: "Production UI stacks, state, forms, and rich editors",
     skills: [
-      { name: "React", icon: "logos:react" },
+      { name: "React.js", icon: "logos:react" },
       { name: "Next.js", icon: "skill-icons:nextjs-light" },
-      { name: "Redux", icon: "logos:redux" },
+      { name: "React Native", icon: "tabler:brand-react-native" },
+      { name: "Astro", icon: "logos:astro-icon" },
+      { name: "Vite", icon: "logos:vitejs" },
+      { name: "Redux Toolkit", icon: "logos:redux" },
+      { name: "Zustand", icon: "twemoji:bear" },
+      { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+      {
+        name: "shadcn/ui",
+        icon: "simple-icons:shadcnui",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Radix UI",
+        icon: "simple-icons:radixui",
+        iconClassName: "text-white",
+      },
+      { name: "Framer Motion", icon: "logos:framer" },
+      { name: "React Hook Form", icon: "simple-icons:reacthookform" },
+      { name: "Zod", icon: "simple-icons:zod" },
+      { name: "TanStack Table", icon: "simple-icons:tanstack" },
+      { name: "TipTap", icon: "mdi:format-text", iconClassName: "text-white" },
+      {
+        name: "BlockNote",
+        icon: "mdi:note-text-outline",
+        iconClassName: "text-white",
+      },
+    ],
+  },
+  {
+    title: "Backend",
+    subtitle: "APIs, ORMs, and migrations across Node and Python",
+    skills: [
+      { name: "Node.js", icon: "logos:nodejs-icon" },
       {
         name: "Express.js",
         icon: "simple-icons:express",
         iconClassName: "text-white",
       },
-      { name: "Node.js", icon: "logos:nodejs-icon" },
-      { name: "React Native", icon: "tabler:brand-react-native" },
-      { name: "AWS", icon: "logos:aws" },
+      { name: "Django", icon: "logos:django-icon" },
       {
-        name: "Redux Toolkit",
-        icon: "simple-icons:redux",
+        name: "Django REST Framework",
+        icon: "simple-icons:django",
+        iconClassName: "text-white",
+      },
+      { name: "FastAPI", icon: "logos:fastapi-icon" },
+      {
+        name: "Django Channels",
+        icon: "mdi:broadcast",
+        iconClassName: "text-white",
+      },
+      { name: "Drizzle ORM", icon: "simple-icons:drizzle" },
+      {
+        name: "Alembic",
+        icon: "mdi:flask-outline",
         iconClassName: "text-white",
       },
     ],
   },
   {
-    title: "Tools",
-    subtitle: "Collaboration, delivery, and observability essentials",
+    title: "AI / LLM / ML",
+    subtitle: "LLM APIs, RAG pipelines, and prompt engineering in production",
+    skills: [
+      {
+        name: "OpenAI API",
+        icon: "simple-icons:openai",
+        iconClassName: "text-white",
+      },
+      { name: "Google Gemini", icon: "logos:google-gemini" },
+      { name: "Anthropic Claude", icon: "logos:claude" },
+      {
+        name: "Fal AI",
+        icon: "mdi:image-multiple-outline",
+        iconClassName: "text-white",
+      },
+      {
+        name: "OpenRouter",
+        icon: "simple-icons:openrouter",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Vercel AI SDK",
+        icon: "simple-icons:vercel",
+        iconClassName: "text-white",
+      },
+      {
+        name: "RAG & Vector Search",
+        icon: "mdi:file-search-outline",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Embeddings",
+        icon: "mdi:graph-outline",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Prompt Engineering",
+        icon: "mdi:message-cog-outline",
+        iconClassName: "text-white",
+      },
+      {
+        name: "AI Chatbots",
+        icon: "mdi:robot-outline",
+        iconClassName: "text-white",
+      },
+    ],
+  },
+  {
+    title: "Async & Job Queues",
+    subtitle: "Background workers, retries, and webhook orchestration",
+    skills: [
+      { name: "Celery", icon: "simple-icons:celery" },
+      { name: "Redis", icon: "logos:redis" },
+      {
+        name: "TaskIQ",
+        icon: "mdi:lightning-bolt-outline",
+        iconClassName: "text-white",
+      },
+      { name: "BullMQ", icon: "twemoji:ox" },
+      {
+        name: "Cron Jobs",
+        icon: "mdi:clock-outline",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Background Workers",
+        icon: "mdi:cogs",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Idempotency & Retries",
+        icon: "mdi:refresh",
+        iconClassName: "text-white",
+      },
+      { name: "Webhooks", icon: "mdi:webhook", iconClassName: "text-white" },
+    ],
+  },
+  {
+    title: "Real-Time Systems",
+    subtitle: "Live updates over sockets, streams, and pub/sub",
+    skills: [
+      {
+        name: "WebSockets",
+        icon: "mdi:swap-horizontal",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Socket.IO",
+        icon: "simple-icons:socketdotio",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Django Channels",
+        icon: "mdi:broadcast",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Server-Sent Events",
+        icon: "mdi:access-point",
+        iconClassName: "text-white",
+      },
+      { name: "Firebase Firestore", icon: "logos:firebase" },
+      {
+        name: "Stream Chat",
+        icon: "mdi:message-text-outline",
+        iconClassName: "text-white",
+      },
+    ],
+  },
+  {
+    title: "Databases & Storage",
+    subtitle: "Relational, document, cache, and search layers",
+    skills: [
+      { name: "PostgreSQL", icon: "logos:postgresql" },
+      { name: "MongoDB", icon: "logos:mongodb-icon" },
+      { name: "Redis", icon: "logos:redis" },
+      { name: "Supabase", icon: "logos:supabase-icon" },
+      { name: "Firebase", icon: "logos:firebase" },
+      { name: "NeonDB", icon: "simple-icons:neon", iconClassName: "text-white" },
+      {
+        name: "SQLite",
+        icon: "simple-icons:sqlite",
+        iconClassName: "text-white",
+      },
+      { name: "Typesense", icon: "mdi:magnify", iconClassName: "text-white" },
+    ],
+  },
+  {
+    title: "REST API Design",
+    subtitle: "Auth, validation, and fault-tolerant integrations",
+    skills: [
+      { name: "RESTful APIs", icon: "mdi:api", iconClassName: "text-white" },
+      {
+        name: "JWT",
+        icon: "simple-icons:jsonwebtokens",
+        iconClassName: "text-white",
+      },
+      {
+        name: "OAuth",
+        icon: "mdi:shield-lock-outline",
+        iconClassName: "text-white",
+      },
+      { name: "Clerk", icon: "simple-icons:clerk", iconClassName: "text-white" },
+      {
+        name: "Rate Limiting",
+        icon: "mdi:speedometer",
+        iconClassName: "text-white",
+      },
+    ],
+  },
+  {
+    title: "Payments & Integrations",
+    subtitle: "Money movement and third-party platform plumbing",
+    skills: [
+      { name: "Stripe", icon: "logos:stripe" },
+      {
+        name: "Razorpay",
+        icon: "simple-icons:razorpay",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Dodo Payments",
+        icon: "simple-icons:dodopayments",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Plaid",
+        icon: "mdi:bank-outline",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Sportmonks",
+        icon: "mdi:soccer",
+        iconClassName: "text-white",
+      },
+      {
+        name: "DocuSeal",
+        icon: "mdi:file-sign",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Cal.com",
+        icon: "simple-icons:caldotcom",
+        iconClassName: "text-white",
+      },
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    subtitle: "Shipping and operating apps across cloud platforms",
+    skills: [
+      { name: "AWS (EC2 · S3 · RDS)", icon: "logos:aws" },
+      {
+        name: "Vercel",
+        icon: "simple-icons:vercel",
+        iconClassName: "text-white",
+      },
+      { name: "Cloudflare", icon: "logos:cloudflare-icon" },
+      {
+        name: "Coolify",
+        icon: "simple-icons:coolify",
+        iconClassName: "text-white",
+      },
+      {
+        name: "Render",
+        icon: "simple-icons:render",
+        iconClassName: "text-white",
+      },
+      { name: "Netlify", icon: "logos:netlify-icon" },
+      { name: "Firebase Hosting", icon: "logos:firebase" },
+      {
+        name: "SSH Tunneling",
+        icon: "mdi:console",
+        iconClassName: "text-white",
+      },
+    ],
+  },
+  {
+    title: "Tools & Practices",
+    subtitle: "Delivery workflow, testing, and collaboration",
     skills: [
       { name: "Git", icon: "logos:git-icon" },
-      { name: "Firebase", icon: "logos:firebase" },
-      { name: "Supabase", icon: "logos:supabase-icon" },
+      { name: "GitHub", icon: "mdi:github", iconClassName: "text-white" },
       { name: "Jira", icon: "logos:jira" },
-      { name: "Bitbucket", icon: "logos:bitbucket" },
-    ],
-  },
-  {
-    title: "Databases",
-    subtitle: "Structured and document-first data layers",
-    skills: [
-      { name: "MongoDB", icon: "logos:mongodb-icon" },
-      { name: "SQL", icon: "mdi:database", iconClassName: "text-white" },
+      { name: "Playwright", icon: "logos:playwright" },
+      { name: "Postman", icon: "logos:postman-icon" },
       {
-        name: "NoSQL",
-        icon: "mdi:database-cog-outline",
+        name: "Agile / Scrum",
+        icon: "mdi:account-group",
         iconClassName: "text-white",
       },
-      { name: "PostgreSQL", icon: "logos:postgresql" },
+      {
+        name: "Code Review",
+        icon: "mdi:code-tags-check",
+        iconClassName: "text-white",
+      },
     ],
   },
 ];
 export const projects = [
   {
     id: 0,
+    name: "Pannly",
+    description:
+      "A startup-idea marketplace that mines real pain points from Reddit and Hacker News, scores them with an LLM, clusters them using pgvector embeddings, and publishes evidence-backed idea briefs — unlockable for $3, refunded automatically when the buyer ships within 30 days.",
+    liveLink: "https://pannly.getrevlio.com/",
+    githubLink: null,
+    image: "/assets/projects/pannly.png",
+    bgImage: "/assets/backgrounds/blanket.jpg",
+    frameworks: [
+      { id: 1, name: "FastAPI" },
+      { id: 2, name: "Next.js" },
+      { id: 3, name: "PostgreSQL" },
+      { id: 4, name: "pgvector" },
+      { id: 5, name: "Redis" },
+      { id: 6, name: "OpenRouter" },
+      { id: 7, name: "Dodo Payments" },
+    ],
+  },
+  {
+    id: 1,
     name: "SaaS Guard",
     description:
       "A centralized entitlement and permission management system for SaaS applications, handling feature access, roles, usage limits, and user-level overrides without hard-coded logic.",
     liveLink: "https://saasguard.rohitbuilds.tech/",
     githubLink: "https://github.com/rohit-jsfreaky/SaasGuard-frontend",
     image: "/assets/projects/saasguard.png",
-    bgImage: "/assets/backgrounds/blanket.jpg",
+    bgImage: "/assets/backgrounds/table.jpg",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "TypeScript" },
@@ -141,7 +415,26 @@ export const projects = [
     ],
   },
   {
-    id: 1,
+    id: 2,
+    name: "Vouchley",
+    description:
+      "A real-time signup verification API for SaaS — five signal checks (email syntax, MX records, disposable domains, domain age, IP risk) run in parallel and merge into a 0–100 trust score with an approve/review/block recommendation, at p95 under 1.5 seconds.",
+    liveLink: "https://vouchley.getrevlio.com/",
+    githubLink: null,
+    image: "/assets/projects/vouchley.png",
+    bgImage: "/assets/backgrounds/curtains.jpg",
+    frameworks: [
+      { id: 1, name: "FastAPI" },
+      { id: 2, name: "Next.js" },
+      { id: 3, name: "PostgreSQL" },
+      { id: 4, name: "Redis" },
+      { id: 5, name: "OpenRouter" },
+      { id: 6, name: "IPQualityScore" },
+      { id: 7, name: "Dodo Payments" },
+    ],
+  },
+  {
+    id: 3,
     name: "Skill Arena",
     description:
       "An online Esport Tournament Management System with team registrations, match scheduling, and real-time score updates.",
@@ -160,7 +453,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: "Csv Editor",
     description:
       "This project is a robust CSV management platform that combines dynamic table editing, cloud storage with AWS S3, and secure authentication to deliver a seamless and user-friendly experience for managing and editing CSV files.",
@@ -178,7 +471,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     name: "Ai Mock Interview",
     description:
       "Built an AI-powered mock interview platform with Next.js, Drizzle ORM, and NeonDB, enhancing user preparation by 80%. Integrated Gemini API for tailored questions and Clerk for secure authentication, ensuring efficiency and scalability.",
@@ -194,7 +487,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     name: "Ai Resume Builder",
     description:
       "I've developed an AI-powered resume builder using React, Node.js, and MongoDB, featuring AI-driven suggestions via Gemini API and secure authentication with Clerk",
@@ -211,7 +504,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     name: "Job Portal",
     description:
       "Developed a job portal using React, Node.js, and MongoDB. Features include secure authentication, job postings, and application management, bridging the gap between students andemployers.",
@@ -225,6 +518,62 @@ export const projects = [
       { id: 3, name: "Tailwind Css" },
       { id: 4, name: "Node.js" },
       { id: 5, name: "Express.js" },
+    ],
+  },
+];
+export const companyProjects = [
+  {
+    id: 1,
+    name: "TransferPitch",
+    company: "Techorigins",
+    role: "Full-Stack Engineer",
+    description:
+      "A B2B marketplace for football player transfers — clubs post tenders, agents pitch their players, and deals close in-app through chat, video meetings, and contract signing. Player data is aggregated from four providers (Wyscout, SportMonks, TheSports, Transfermarkt).",
+    contributions: [
+      "Optimized the transfers list endpoint from ~5 minutes to under 1 second using query projection, a generated sort column, and three-tier Redis caching",
+      "Deduplicated roughly a million player records across 4 data providers with pg_trgm trigram and composite indexes",
+      "Built real-time in-app notifications over Django Channels with a Redis channel layer",
+      "Built 8 secured backend endpoints powering a WhatsApp bot that creates clubs, accounts, and tenders entirely via chat",
+    ],
+    liveLink: "https://dashboard.transferpitch.com/",
+    image: "/assets/projects/transferpitch.png",
+    bgImage: "/assets/backgrounds/map.jpg",
+    techStack: [
+      "Django",
+      "DRF",
+      "PostgreSQL",
+      "Celery",
+      "Redis",
+      "Django Channels",
+      "React",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    id: 2,
+    name: "SquareOne",
+    company: "Techorigins",
+    role: "Full-Stack Engineer",
+    description:
+      "An AI bookkeeping SaaS for US creative professionals — connects banks via Plaid and categorizes a full year of transactions into IRS Schedule C categories with an LLM, turning tax prep into a one-hour guided review instead of a spreadsheet marathon.",
+    contributions: [
+      "Engineered a structured categorization prompt with pre-LLM heuristics, lifting accuracy from ~70% to 90%+ on a labeled test set",
+      "Built live categorization progress over Server-Sent Events backed by Redis pub/sub",
+      "Designed Plaid reconnect dedup with canonical account keys and transaction fingerprints so reconnecting a bank never duplicates history",
+      "Gated AI spend behind Stripe payment with webhook-driven job queueing",
+    ],
+    liveLink: "https://trysquareone.com/",
+    image: "/assets/projects/cuiq.png",
+    bgImage: "/assets/backgrounds/poster.jpg",
+    techStack: [
+      "Django",
+      "DRF",
+      "Celery",
+      "Redis",
+      "Plaid",
+      "Stripe",
+      "OpenRouter",
+      "React",
     ],
   },
 ];

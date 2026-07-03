@@ -104,7 +104,7 @@ const Skills = () => {
             {/* Category Header */}
             <div className="category-title flex items-baseline gap-4 mb-6">
               <span className="text-teal text-sm font-mono">
-                0{catIndex + 1}
+                {String(catIndex + 1).padStart(2, "0")}
               </span>
               <h3 className="text-xl md:text-2xl text-white font-light">
                 {category.title}

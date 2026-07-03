@@ -57,8 +57,7 @@ const Works = () => {
         <div
           ref={(el) => (cardRefs.current[0] = el)}
           className="group relative col-span-1 md:col-span-2 lg:col-span-3
-            rounded-2xl overflow-hidden cursor-pointer
-            bg-black min-h-[450px] md:min-h-[550px] lg:min-h-[600px]"
+            rounded-2xl overflow-hidden cursor-pointer bg-black"
           onClick={() =>
             window.open(
               featuredProject.liveLink || featuredProject.githubLink,
@@ -66,24 +65,18 @@ const Works = () => {
             )
           }
         >
-          {/* Background Image */}
+          {/* Background Texture */}
           <div className="absolute inset-0">
             <img
-              src={featuredProject.image}
-              alt={featuredProject.name}
-              className="w-full h-full object-cover object-center
-                transition-transform duration-700 ease-out
-                group-hover:scale-105"
+              src={featuredProject.bgImage}
+              alt=""
+              className="w-full h-full object-cover object-center"
             />
-            <div
-              className="absolute inset-0 bg-gradient-to-t
-              from-black via-black/50 to-transparent
-              opacity-80 group-hover:opacity-90 transition-opacity duration-500"
-            />
+            <div className="absolute inset-0 bg-black/85" />
           </div>
 
           {/* Content */}
-          <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-end">
+          <div className="relative p-6 md:p-10 pt-20 md:pt-24 flex flex-col gap-8">
             {/* Featured Badge */}
             <span
               className="absolute top-5 left-5 px-4 py-2
@@ -126,6 +119,19 @@ const Works = () => {
               )}
             </div>
 
+            {/* Project Screenshot - full, uncropped */}
+            <div className="flex items-center justify-center">
+              <img
+                src={featuredProject.image}
+                alt={featuredProject.name}
+                className="max-h-[280px] md:max-h-[400px] lg:max-h-[460px]
+                  w-auto max-w-full object-contain
+                  rounded-xl border border-white/10 shadow-2xl shadow-black/50
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-[1.02]"
+              />
+            </div>
+
             {/* Project Info */}
             <div className="space-y-4">
               <h3 className="text-3xl md:text-5xl lg:text-6xl text-white font-light">
@@ -160,36 +166,25 @@ const Works = () => {
             key={project.id}
             ref={(el) => (cardRefs.current[index + 1] = el)}
             className="group relative rounded-2xl overflow-hidden cursor-pointer
-              bg-black min-h-[320px] md:min-h-[380px]"
+              bg-black flex flex-col"
             onClick={() =>
               window.open(project.liveLink || project.githubLink, "_blank")
             }
           >
-            {/* Project Image */}
+            {/* Background Texture */}
             <div className="absolute inset-0">
               <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-full object-cover object-center
-                  transition-transform duration-500 ease-out
-                  group-hover:scale-110"
+                src={project.bgImage}
+                alt=""
+                className="w-full h-full object-cover object-center"
               />
-              <div
-                className="absolute inset-0 bg-gradient-to-t
-                from-black via-black/60 to-black/20
-                opacity-70 group-hover:opacity-95 transition-opacity duration-300"
-              />
+              <div className="absolute inset-0 bg-black/85" />
             </div>
 
             {/* Content */}
-            <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-end">
+            <div className="relative p-5 md:p-6 flex flex-col h-full">
               {/* Links */}
-              <div
-                className="absolute top-4 right-4 flex gap-2
-                opacity-100 md:opacity-0 md:group-hover:opacity-100
-                translate-y-0 md:translate-y-2 md:group-hover:translate-y-0
-                transition-all duration-300"
-              >
+              <div className="flex justify-end gap-2 mb-3">
                 {project.githubLink && (
                   <a
                     href={project.githubLink}
@@ -221,32 +216,31 @@ const Works = () => {
                 )}
               </div>
 
+              {/* Project Screenshot - full, uncropped */}
+              <div className="flex-1 flex items-center justify-center mb-4 min-h-[160px] md:min-h-[190px]">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="max-h-[160px] md:max-h-[190px]
+                    w-auto max-w-full object-contain
+                    rounded-lg border border-white/10 shadow-xl shadow-black/50
+                    transition-transform duration-500 ease-out
+                    group-hover:scale-105"
+                />
+              </div>
+
               {/* Project Name */}
-              <h3
-                className="text-xl md:text-2xl text-white font-light mb-2
-                transform translate-y-0 md:translate-y-2 md:group-hover:translate-y-0
-                transition-transform duration-300"
-              >
+              <h3 className="text-xl md:text-2xl text-white font-light mb-2">
                 {project.name}
               </h3>
 
               {/* Description */}
-              <p
-                className="text-sm text-white/70 line-clamp-2 mb-3
-                opacity-100 md:opacity-0 md:group-hover:opacity-100
-                translate-y-0 md:translate-y-3 md:group-hover:translate-y-0
-                transition-all duration-300 delay-75"
-              >
+              <p className="text-sm text-white/70 line-clamp-2 mb-3">
                 {project.description}
               </p>
 
               {/* Tech Stack */}
-              <div
-                className="flex flex-wrap gap-1.5
-                opacity-100 md:opacity-0 md:group-hover:opacity-100
-                translate-y-0 md:translate-y-3 md:group-hover:translate-y-0
-                transition-all duration-300 delay-100"
-              >
+              <div className="flex flex-wrap gap-1.5">
                 {project.frameworks.slice(0, 4).map((framework) => (
                   <span
                     key={framework.id}
