@@ -671,7 +671,6 @@ export const npmPackages = [
     image: "/assets/projects/error-less.png",
     npmLink: "https://www.npmjs.com/package/error-less",
     githubLink: "https://github.com/rohit-jsfreaky/error-less",
-    downloads: "1.2k+"
   },
   {
     id: 2,
@@ -685,7 +684,6 @@ export const npmPackages = [
     image: "/assets/projects/cron-safe.png",
     npmLink: "https://www.npmjs.com/package/cron-safe",
     githubLink: "https://github.com/rohit-jsfreaky/cron-safe",
-    downloads: "800+"
   },
   {
     id: 3,
@@ -699,7 +697,6 @@ export const npmPackages = [
     image: "/assets/projects/node-network-tab.png",
     npmLink: "https://www.npmjs.com/package/node-network-tab",
     githubLink: "https://github.com/rohit-jsfreaky/node-network-tab",
-    downloads: "500+"
   },
   {
     id: 4,
@@ -713,7 +710,6 @@ export const npmPackages = [
     image: "/assets/projects/express-rate-limit-redis-slim.png",
     npmLink: "https://www.npmjs.com/package/express-rate-limit-redis-slim",
     githubLink: "https://github.com/rohit-jsfreaky/express-rate-limit-redis-slim",
-    downloads: "2.5k+"
   },
   {
     id: 5,
@@ -727,7 +723,6 @@ export const npmPackages = [
     image: "/assets/projects/zod-to-mock-data.png",
     npmLink: "https://www.npmjs.com/package/zod-mock-data",
     githubLink: "https://github.com/rohit-jsfreaky/zod-mock-data",
-    downloads: "900+"
   }
 ];
 export const socials = [

@@ -407,7 +407,7 @@ const OnyxPortfolio = () => {
               </p>
               <p className="mt-1.5 text-[12.5px] leading-relaxed text-[var(--muted)]">{pkg.solution}</p>
               <div className="mt-3 flex items-center justify-between">
-                <span className="font-mono text-[10px] text-[var(--soft)]">{pkg.downloads} downloads</span>
+                <span className="font-mono text-[10px] text-[var(--soft)]">{pkg?.downloads}</span>
                 <span className="flex items-center gap-2 text-[var(--soft)]">
                   <a
                     href={pkg.npmLink}
