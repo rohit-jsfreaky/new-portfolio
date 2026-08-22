@@ -8,6 +8,7 @@ import {
   experienceList,
   skillGroups,
   packages,
+  achievements,
 } from "./data/onyxData";
 
 /**
@@ -243,6 +244,27 @@ const OnyxPortfolio = () => {
             </li>
           ))}
         </ul>
+      </Shell>
+
+      {/* ----------------------------- highlights --------------------------- */}
+      <SectionHeader title="Highlights" />
+      <Shell className="overflow-hidden px-6 py-6 sm:px-8">
+        <div className="onyx-scroll flex gap-4 overflow-x-auto pb-3 sm:grid sm:grid-cols-2">
+          {achievements.map((a, i) => (
+            <div
+              key={a.title}
+              className={cn(
+                "w-64 shrink-0 rounded-xl border border-[var(--line)] bg-[var(--card)] p-4 transition-transform duration-300 hover:rotate-0 sm:w-auto",
+                i % 2 === 0 ? "rotate-[1.2deg]" : "-rotate-[1.2deg]",
+              )}
+            >
+              <p className="text-[13px] font-semibold">{a.title}</p>
+              <p className="mt-1.5 text-[12.5px] leading-relaxed text-[var(--muted)]">
+                {a.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </Shell>
 
       {/* ------------------------------ contact ----------------------------- */}

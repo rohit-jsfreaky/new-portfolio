@@ -736,7 +736,7 @@ export const socials = [
 
 export const experiences = [
   {
-    title: "Frontend Engineer",
+    title: "Full Stack Engineer",
     company_name: "Techorigins",
     icon: "/assets/company/techorigins.jpg",
     iconBg: "#383E56",

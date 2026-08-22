@@ -97,3 +97,16 @@ export const skillGroups = [
 ];
 
 export const packages = npmPackages;
+
+export const achievements = [
+  {
+    title: "🏆 Won the Unlayer Hackathon",
+    description:
+      "Winner of the \"Build with Elements\" hackathon by Unlayer (YC W22).",
+  },
+  {
+    title: "🔀 Contributor at Graphify (YC S26)",
+    description:
+      "3 commits merged into the codebase of Graphify, a YC S26 company.",
+  },
+];
