@@ -13,8 +13,10 @@ export const basics = {
   location: "India",
   email: "rohitkashyapmrt@gmail.com",
   avatar: "/images/profile.png",
-  resume:
-    "https://drive.google.com/file/d/1JxHra95AtuX60PkrXZSaYAUSWGhfjt7E/view?usp=sharing",
+  // Served from our own domain, not Google Drive: the Drive copy went stale
+  // (old two-column build, still listed SaaSGuard, no Cairn) and nothing here
+  // could tell. This file is rebuilt by shared/resume/build_resume.py.
+  resume: "/Rohit_Kumar_Kashyap_Resume.pdf",
   socials: {
     github: "https://github.com/rohit-jsfreaky",
     linkedin: "https://www.linkedin.com/in/r2609/",

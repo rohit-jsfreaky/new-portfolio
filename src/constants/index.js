@@ -759,10 +759,11 @@ export const experiences = [
     iconBg: "#383E56",
     date: "July 2025 - Present",
     points: [
-      "Developed and optimized responsive UIs with React.js, improving page load performance by 30% and enhancing user retention",
-      "Implemented reusable component libraries with TypeScript and Tailwind CSS, reducing development time by 25% across projects.",
-      "Collaborated with backend teams to integrate REST and GraphQL APIs, cutting integration issues by 40%",
-      "Improved accessibility and SEO scores of web apps, achieving 95+ Lighthouse scores and boosting organic traffic",
+      "Lead engineer across 14+ production SaaS products on Django, FastAPI, Node.js, Next.js, PostgreSQL, Redis and AWS.",
+      "Cut the TransferPitch transfers dashboard endpoint from roughly five minutes to under one second via query projection, a generated sort column, three-tier Redis caching and cursor pagination.",
+      "Deduplicated roughly a million player records across four providers, taking match lookups from minutes to sub-second with PostgreSQL pg_trgm trigram and match-key indexes.",
+      "Built the AI bookkeeping engine for cuiq (DRF, React, Plaid, Stripe, Gemini 2.5 Flash via OpenRouter); an A/B evaluation harness lifted transaction categorization from ~70% to over 90% on a labeled set.",
+      "Shipped StudioMode.ai (Fal AI, Firebase, Dodo Payments) at 1,000+ image generations a day, and MailValid, a FastAPI service verifying 10,000 emails per batch via async workers and webhooks.",
     ],
   },
   {
@@ -772,10 +773,9 @@ export const experiences = [
     iconBg: "#383E56",
     date: "May 2025 - July 2025",
     points: [
-      "Developed and deployed custom ERP systems, streamlining workflows and reducing manual processing time by 30%.",
-      "Built responsive web applications that improved user engagement and led to a 25% faster load time across platforms.",
-      "Delivered cross-platform mobile apps that enhanced customer reach, achieving 40% higher user adoption within the first release cycle.",
-      "Managed full-stack development independently, completing projects 20% ahead of deadlines while ensuring 99.9% uptime",
+      "Built and optimized custom ERP modules in React.js, cutting manual processing time by roughly 30% for internal teams.",
+      "Improved front-end performance across the platform, taking page load times down by around 25% through component and bundle optimization.",
+      "Worked directly with the product owner to turn requirements into shipped React features on a two-person team.",
     ],
   },
   {
@@ -785,10 +785,9 @@ export const experiences = [
     iconBg: "#383E56",
     date: "Jan 2025 - May 2025",
     points: [
-      "Improved UI Performance by 40% – Optimized re-renders and data flow to enhance app responsiveness and user experience.",
-      "Integrated 100% Functional Features – Successfully implemented Google APIs, user KYC verification, and real-time chat, ensuring seamless interactions.",
-      "Ensured 99.9% Uptime on Both Platforms – Fixed Android and iOS-specific issues, enabling smooth cross-platform functionality.",
-      "Enhanced State Management by 60% – Optimized data handling for real-time updates, reducing lag and improving app efficiency.",
+      "Improved React Native app performance by roughly 40% through render optimization and Redux state management.",
+      "Shipped real-time chat supporting 500+ concurrent users with sub-100 ms message delivery.",
+      "Integrated Google APIs and user KYC verification, and fixed Android and iOS specific issues across the production ride-sharing app.",
     ],
   },
   {
@@ -798,10 +797,9 @@ export const experiences = [
     iconBg: "#383E56",
     date: "July 2024 - Dec 2024",
     points: [
-      "Developed 5+ full-stack web applications using MERN stack and PostgreSQL, including complex platforms like an esports tournament management system with secure authentication, payment integration, and admin control.",
-      "Engineered complete backend and frontend architecture for multiple client projects, handling RESTful APIs, responsive UI, and real-time data using React, Node.js, and Express.",
-      "Built and deployed a cross-platform mobile application using React Native under NDA, integrating secure user flows, API consumption, and native device capabilities.",
-      "Delivered production-ready solutions for businesses, from modern portfolio websites to scalable multi-user platforms, improving user engagement and functionality by 40%+.",
+      "Built 5+ full-stack web applications with React, Node.js, Express, PostgreSQL and Redis, including an esports tournament platform with authentication, payments and an admin console.",
+      "Shipped 50+ REST endpoints handling 100+ requests per second, cutting average response latency by around 300 ms.",
+      "Built and deployed a cross-platform React Native app under NDA, covering secure user flows, API consumption and native device capabilities.",
     ],
   },
   {
@@ -811,10 +809,9 @@ export const experiences = [
     iconBg: "#383E56",
     date: "Apr 2024 - June 2024",
     points: [
-      "Developed a full-stack AI-powered resume builder using React, Node.js, and MongoDB, integrating Gemini API for AI-driven suggestions and Clerk for secure authentication.",
-      "Built a dynamic job portal using the MERN stack, implementing recruiter and student authentication, job posting features, and job application tracking.",
-      "Utilized RESTful APIs to handle user authentication, job data retrieval, and secure communication between frontend and backend systems.",
-      "Ensured seamless UI/UX with Tailwind CSS and Shadcn UI, improving user experience across devices while optimizing performance.",
+      "Built an AI resume generator with React, Node.js, MongoDB and the Gemini API, producing 50+ resumes a day, with Clerk handling authentication.",
+      "Built a job portal on the MERN stack with recruiter and applicant authentication, job posting workflows and real-time application tracking.",
+      "Built the REST layer behind both: authentication, job data retrieval and secure frontend-to-backend communication.",
     ],
   },
 ];
