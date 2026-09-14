@@ -376,6 +376,23 @@ export const skillCategories = [
 ];
 export const projects = [
   {
+    id: 100,
+    name: "Cairn",
+    description:
+      "A browser that remembers websites, handed to an AI as an MCP server. An agent explores a site once; Cairn saves the route as a trail and every run after that replays it in deterministic Python with zero model calls, repairing only the step that breaks when the site changes. Measured over 90 benchmarked sessions: 52% fewer tool calls and 47% fewer tokens than Playwright MCP, correct 30 out of 30.",
+    liveLink: "https://cairnmcp.fun/",
+    githubLink: null,
+    image: "/assets/projects/cairn.png",
+    bgImage: "/assets/backgrounds/blanket.jpg",
+    frameworks: [
+      { id: 1, name: "Python" },
+      { id: 2, name: "MCP" },
+      { id: 3, name: "Playwright" },
+      { id: 4, name: "PyPI" },
+      { id: 5, name: "x402" },
+    ],
+  },
+  {
     id: 0,
     name: "Pannly",
     description:
@@ -713,7 +730,7 @@ export const npmPackages = [
   },
   {
     id: 5,
-    name: "zod-mock-data",
+    name: "zod-to-mock-data",
     tagline: "The 'DX' Booster",
     emoji: "🛠️",
     problem: "Writing mock data for tests is tedious and often drifts out of sync with actual Type definitions.",
@@ -721,8 +738,8 @@ export const npmPackages = [
     features: ["Single Source of Truth - Zod schema defines validation & mock data", "Complex Types - Handles nested objects, arrays, optional fields"],
     techStack: ["TypeScript", "Zod", "Recursive Algorithms", "Generics"],
     image: "/assets/projects/zod-to-mock-data.png",
-    npmLink: "https://www.npmjs.com/package/zod-mock-data",
-    githubLink: "https://github.com/rohit-jsfreaky/zod-mock-data",
+    npmLink: "https://www.npmjs.com/package/zod-to-mock-data",
+    githubLink: "https://github.com/rohit-jsfreaky/zod-to-mock-data",
   }
 ];
 export const socials = [

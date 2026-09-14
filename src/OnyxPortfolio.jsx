@@ -8,6 +8,7 @@ import {
   experienceList,
   skillGroups,
   packages,
+  contributions,
   achievements,
 } from "./data/onyxData";
 
@@ -405,9 +406,53 @@ const OnyxPortfolio = () => {
         </div>
       </Shell>
 
-      {/* --------------------------- open source / npm ----------------------- */}
+      {/* ------------------------ open source contributions ------------------ */}
       <SectionHeader
         title="Open Source"
+        aside={
+          <span className="hidden font-mono text-[10px] tracking-wider text-[var(--soft)] sm:inline">
+            ( other people&apos;s repos )
+          </span>
+        }
+      />
+      <Shell>
+        {contributions.map((c, i) => (
+          <a
+            key={c.repo}
+            href={c.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "group flex items-start gap-4 px-6 py-5 transition-colors duration-200 hover:bg-[var(--hover)] sm:px-8",
+              i > 0 && "border-t border-[var(--line)]",
+            )}
+          >
+            <span className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-lg border border-[var(--line)] bg-[var(--chip)] text-[var(--muted)] transition-colors group-hover:text-[var(--fg)]">
+              <Icon icon="mdi:github" className="size-4" />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+                <span className="text-[15px] font-semibold">{c.repo}</span>
+                <span className="flex items-center gap-1 font-mono text-[11px] text-[var(--soft)]">
+                  <Icon icon="lucide:star" className="size-3" />
+                  {c.stars}
+                </span>
+              </span>
+              <span className="mt-1.5 block text-[13px] leading-relaxed text-[var(--muted)]">
+                {c.summary}
+              </span>
+            </span>
+            <Icon
+              icon="lucide:arrow-up-right"
+              className="mt-1 size-3.5 shrink-0 text-[var(--soft)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--fg)]"
+            />
+          </a>
+        ))}
+      </Shell>
+
+      {/* ------------------------------ npm packages ------------------------- */}
+      <SectionHeader
+        title="npm Packages"
         aside={
           <span className="hidden font-mono text-[10px] tracking-wider text-[var(--soft)] sm:inline">
             ( published on npm )
